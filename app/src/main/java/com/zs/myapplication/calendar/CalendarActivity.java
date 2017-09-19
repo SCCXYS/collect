@@ -1,125 +1,122 @@
 package com.zs.myapplication.calendar;
 
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zs.myapplication.R;
+import com.zs.myapplication.calendar.data.Type;
+import com.zs.myapplication.calendar.listener.OnDateSetListener;
 
-public class CalendarActivity extends AppCompatActivity implements View.OnClickListener {
-    private GridView record_gridView;//定义gridView
-    private DateAdapter dateAdapter;//定义adapter
-    private ImageView record_left;//左箭头
-    private ImageView record_right;//右箭头
-    private TextView record_title;//标题
-    private int year;
-    private int month;
-    private String title;
-    private int[][] days = new int[6][7];
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
-        //初始化日期数据
-        initData();
-        //初始化组件
-        initView();
-        //组件点击监听事件
-        initEvent();
-    }
+public class CalendarActivity extends AppCompatActivity implements View.OnClickListener ,OnDateSetListener{
 
-    private void initData() {
-        year = DateUtils.getYear();
-        month = DateUtils.getMonth();
-    }
+        TimePickerDialog mDialogAll;
+        TimePickerDialog mDialogYearMonth;
+        TimePickerDialog mDialogYearMonthDay;
+        TimePickerDialog mDialogMonthDayHourMinute;
+        TimePickerDialog mDialogHourMinute;
+        TextView mTvTime;
 
-    private void initEvent() {
-        record_left.setOnClickListener(this);
-        record_right.setOnClickListener(this);
-    }
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    private void initView() {
-        /**
-         * 以下是初始化GridView
-         */
-        record_gridView = (GridView) findViewById(R.id.record_gridView);
-        days = DateUtils.getDayOfMonthFormat(2016, 8);
-        Log.e("---",days.toString());
-        dateAdapter = new DateAdapter(this, days, year, month);//传入当前月的年
-        record_gridView.setAdapter(dateAdapter);
-        record_gridView.setVerticalSpacing(60);
-        record_gridView.setEnabled(false);
-        /**
-         * 以下是初始化其他组件
-         */
-        record_left = (ImageView) findViewById(R.id.record_left);
-        record_right = (ImageView) findViewById(R.id.record_right);
-        record_title = (TextView) findViewById(R.id.record_title);
-    }
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_calendar);
+            initView();
+            long tenYears = 10L * 365 * 1000 * 60 * 60 * 24L;
+            mDialogAll = new TimePickerDialog.Builder()
+                    .setCallBack(this)
+                    .setCancelStringId("取消")
+                    .setSureStringId("确认")
+                    .setTitleStringId("选择时间")
+                    .setYearText("年")
+                    .setMonthText("月")
+                    .setDayText("日")
+                    .setHourText("时")
+                    .setMinuteText("分")
+                    .setCyclic(false)
+                    .setMinMillseconds(System.currentTimeMillis())
+                    .setMaxMillseconds(System.currentTimeMillis() + tenYears)
+                    .setCurrentMillseconds(System.currentTimeMillis())
+                    .setThemeColor(getResources().getColor(R.color.timepicker_dialog_bg))
+                    .setType(Type.ALL)
+                    .setWheelItemTextNormalColor(getResources().getColor(R.color.timetimepicker_default_text_color))
+                    .setWheelItemTextSelectorColor(getResources().getColor(R.color.timepicker_toolbar_bg))
+                    .setWheelItemTextSize(12)
+                    .build();
 
-
-    /**
-     * 下一个月
-     *
-     * @return
-     */
-    private int[][] nextMonth() {
-        if (month == 12) {
-            month = 1;
-            year++;
-        } else {
-            month++;
+//        mDialogAll = new TimePickerDialog.Builder()
+//                .setMinMillseconds(System.currentTimeMillis())
+//                .setThemeColor(R.color.colorPrimary)
+//                .setWheelItemTextSize(16)
+//                .setCallBack(this)
+//                .build();
+            mDialogYearMonth = new TimePickerDialog.Builder()
+                    .setType(Type.YEAR_MONTH)
+                    .setThemeColor(getResources().getColor(R.color.colorPrimary))
+                    .setCallBack(this)
+                    .build();
+            mDialogYearMonthDay = new TimePickerDialog.Builder()
+                    .setType(Type.YEAR_MONTH_DAY)
+                    .setCallBack(this)
+                    .build();
+            mDialogMonthDayHourMinute = new TimePickerDialog.Builder()
+                    .setType(Type.MONTH_DAY_HOUR_MIN)
+                    .setCallBack(this)
+                    .build();
+            mDialogHourMinute = new TimePickerDialog.Builder()
+                    .setType(Type.HOURS_MINS)
+                    .setCallBack(this)
+                    .build();
         }
-        days = DateUtils.getDayOfMonthFormat(year, month);
-        return days;
-    }
 
-    /**
-     * 上一个月
-     *
-     * @return
-     */
-    private int[][] prevMonth() {
-        if (month == 1) {
-            month = 12;
-            year--;
-        } else {
-            month--;
-        }
-        days = DateUtils.getDayOfMonthFormat(year, month);
-        return days;
-    }
+    void initView() {
+        findViewById(R.id.btn_all).setOnClickListener(this);
+        findViewById(R.id.btn_year_month_day).setOnClickListener(this);
+        findViewById(R.id.btn_year_month).setOnClickListener(this);
+        findViewById(R.id.btn_month_day_hour_minute).setOnClickListener(this);
+        findViewById(R.id.btn_hour_minute).setOnClickListener(this);
 
-    /**
-     * 设置标题
-     */
-    private void setTile() {
-        title = year + "年" + month + "月";
-        record_title.setText(title);
+        mTvTime = (TextView) findViewById(R.id.tv_time);
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.record_left:
-                days = prevMonth();
-                dateAdapter = new DateAdapter(this, days, year, month);
-                record_gridView.setAdapter(dateAdapter);
-                dateAdapter.notifyDataSetChanged();
-                setTile();
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_all:
+                mDialogAll.show(getSupportFragmentManager(), "all");
                 break;
-            case R.id.record_right:
-                days = nextMonth();
-                dateAdapter = new DateAdapter(this, days, year, month);
-                record_gridView.setAdapter(dateAdapter);
-                dateAdapter.notifyDataSetChanged();
-                setTile();
+            case R.id.btn_year_month:
+                mDialogYearMonth.show(getSupportFragmentManager(), "year_month");
+                break;
+            case R.id.btn_year_month_day:
+                mDialogYearMonthDay.show(getSupportFragmentManager(), "year_month_day");
+                break;
+            case R.id.btn_month_day_hour_minute:
+                mDialogMonthDayHourMinute.show(getSupportFragmentManager(), "month_day_hour_minute");
+                break;
+            case R.id.btn_hour_minute:
+                mDialogHourMinute.show(getSupportFragmentManager(), "hour_minute");
                 break;
         }
     }
+
+
+    @Override
+    public void onDateSet(TimePickerDialog timePickerDialog, long millseconds) {
+        String text = getDateToString(millseconds);
+        mTvTime.setText(text);
+    }
+
+    public String getDateToString(long time) {
+        Date d = new Date(time);
+        return sf.format(d);
+    }
+
 }

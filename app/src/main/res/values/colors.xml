@@ -14,4 +14,9 @@
 
     <color name="chb_text_color">#ff909090</color>
     <color name="tab_message">#67da9f</color>
+
+    <color name="timetimepicker_default_text_color">#999999</color>
+    <color name="timepicker_toolbar_bg">#e60012</color>
+    <color name="timepicker_dialog_bg">#80000000</color>
+    <color name="timepicker_line">#e8e8e8</color>
 </resources>

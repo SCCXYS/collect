@@ -48,4 +48,20 @@
     <string name="refresh_done">刷新完成</string>
     <string name="loading_done">加载完成</string>
     <string name="listview_header_last_time">last update：</string>
+
+    <string name="all">ALL</string>
+    <string name="year_month_day">YEAR-MONTH-DAY</string>
+    <string name="year_month">YEAR-MONTH</string>
+    <string name="month_day_hour_minute">MONTH-DAY-HOUR-MINUTE</string>
+    <string name="hour_minute">HOUR-MINUTE</string>
+
+    <string name="picker_sure">确定</string>
+    <string name="picker_cancel">取消</string>
+    <string name="picker_title">选择时间</string>
+
+    <string name="picker_year">年</string>
+    <string name="picker_month">月</string>
+    <string name="picker_day">日</string>
+    <string name="picker_hour">时</string>
+    <string name="picker_minute">分</string>
 </resources>

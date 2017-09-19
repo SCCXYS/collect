@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.zs.myapplication.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <Button
         android:id="@+id/btn_sticky"
         android:layout_width="match_parent"
@@ -34,15 +37,34 @@
         android:text="卡片式"/>
     <Button
         android:id="@+id/btn_calendar"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="日历"/>
+    <Button
+        android:id="@+id/btn_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="日期"/>
     <Button
         android:id="@+id/btn_xrecycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="XRecyclerView"/>
+    <Button
+        android:id="@+id/btn_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="弹性动画"/>
+    <Button
+        android:id="@+id/btn_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="验证码"/>
+    <Button
+        android:id="@+id/btn_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="汽泡效果"/>
     <com.zs.myapplication.switch_button.SwitchButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,3 +72,4 @@
         android:id="@+id/sb"/>
 
 </LinearLayout>
+</ScrollView>

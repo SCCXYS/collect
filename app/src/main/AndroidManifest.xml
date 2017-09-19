@@ -25,7 +25,11 @@
         <activity android:name=".sliding_card.SlidingCardActivity" />
         <activity android:name=".calendar.CalendarActivity" />
         <activity android:name=".xRecyclerView.RecyclerActivity" />
-        <activity android:name=".xRecyclerView.CollapsingToolbarLayoutActivity"></activity>
+        <activity android:name=".xRecyclerView.CollapsingToolbarLayoutActivity" />
+        <activity android:name=".anim.AnimActivity" />
+        <activity android:name=".Data.DateActivity" />
+        <activity android:name=".verification.VerificationCodeActivity" />
+        <activity android:name=".bubble.BubbleActivity"></activity>
     </application>
 
 </manifest>

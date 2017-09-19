@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zs.myapplication.verification.VerificationCodeActivity">
+
+    <com.zs.myapplication.verification.VerificationCodeView
+        android:layout_marginTop="30dp"
+        android:id="@+id/verifycodeview"
+        android:layout_alignParentRight="true"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <EditText
+        android:id="@+id/edit_input"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@id/verifycodeview"
+        android:hint="请输入验证码"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/verifycodeview"
+        app:layout_constraintRight_toLeftOf="@+id/verifycodeview"
+         />
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifycodeview"
+        android:text="@string/picker_sure"
+        app:layout_constraintTop_toBottomOf="@+id/verifycodeview"
+         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+</android.support.constraint.ConstraintLayout>
