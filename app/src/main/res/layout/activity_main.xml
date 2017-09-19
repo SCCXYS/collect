@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zs.myapplication.MainActivity">
+
+    <Button
+        android:id="@+id/btn_sticky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="顶部粘性"/>
+    <Button
+        android:id="@+id/btn_brokan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除碎片化"/>
+    <Button
+        android:id="@+id/btn_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="约束布局"/>
+    <Button
+        android:id="@+id/btn_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="欢迎页"/>
+    <Button
+        android:id="@+id/btn_sliding_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="卡片式"/>
+    <Button
+        android:id="@+id/btn_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="日历"/>
+    <com.zs.myapplication.switch_button.SwitchButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:sb_show_indicator="false"
+        android:id="@+id/sb"/>
+
+</LinearLayout>

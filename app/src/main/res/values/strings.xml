@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Sticky</string>
+    <string name="welcomanim_title_login">登录</string>
+    <string name="welcomanim_title_regin">注册</string>
+    <string name="welcomanim_title_phone">+86</string>
+    <string name="welcomanim_title_psw">密码</string>
+    <string name="welcomanim_title_forgetpsw">忘记密码?</string>
+    <string name="welcomanim_title_psw_hint">请输入用户密码</string>
+    <string name="welcomanim_title_social">使用社交账号快速登录</string>
+    <string name="welcomanim_title_social_weibo">微博登录</string>
+    <string name="welcomanim_title_social_wechat">微信登录</string>
+    <string name="welcomanim_title_social_qq">QQ登录</string>
+    <string name="welcomanim_title_share">分享到社区</string>
+    <string name="welcomanim_title_policy">隐私政策</string>
+    <string name="welcomanim_down">下载原版小红书</string>
+
+
+    <string name="input_phone">请输入你的手机号码</string>
+    <string name="reg_select_country">请选择国家地区</string>
+    <string name="reg_write_identify_code">请输入短信验证码</string>
+    <string name="smssdk_write_mobile_phone">请填写手机号码</string>
+    <string name="reg_send_ver">发送</string>
+    <string name="reg_next">验证并登录</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="title">
+        <item>当红小花旦越来越惊艳了</item>
+        <item>早秋长袖连衣裙刮起了唯美浪漫风</item>
+        <item>高品质裙装美照让你一次看过瘾</item>
+        <item>蕾丝防晒衫棒球服外套</item>
+        <item>纯色开衫薄款外套防嗮衫</item>
+    </string-array>
+
+    <string-array name="imgs">
+        <item>img1</item>
+        <item>img2</item>
+        <item>img3</item>
+        <item>img4</item>
+        <item>img5</item>
+    </string-array>
+</resources>
