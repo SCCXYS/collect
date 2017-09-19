@@ -1,8 +1,7 @@
 package com.zs.myapplication.calendar;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -36,6 +35,7 @@ public class DateAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
+        Log.e("---","days.length:"+days.length);
         return days.length;
     }
 
@@ -53,18 +53,19 @@ public class DateAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder viewHolder;
         if (view == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.item_grid_view, null);
+            view = View.inflate(context, R.layout.item_grid_view, null);
             viewHolder = new ViewHolder();
             viewHolder.date_item = (TextView) view.findViewById(R.id.date_item);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
         }
-        if (i < 7 && days[i] > 20) {
-            viewHolder.date_item.setTextColor(Color.rgb(204, 204, 204));//将上个月的和下个月的设置为灰色
+       /* if (i < 7 && days[i] > 20) {
+            viewHolder.date_item.setTextColor(Color.RED);//将上个月的和下个月的设置为灰色
         } else if (i > 20 && days[i] < 15) {
-            viewHolder.date_item.setTextColor(Color.rgb(204, 204, 204));
-        }
+            viewHolder.date_item.setTextColor(Color.RED);
+        }*/
+        Log.e("---", i+"->"+days[i]);
         viewHolder.date_item.setText(days[i] + "");
 
         return view;

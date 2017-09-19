@@ -10,9 +10,11 @@ import android.widget.Toast;
 import com.zs.myapplication.broken.BrokanActivity;
 import com.zs.myapplication.calendar.CalendarActivity;
 import com.zs.myapplication.constraint.ConstraintActivity;
+import com.zs.myapplication.sliding_card.SlidingCardActivity;
 import com.zs.myapplication.sticky.StickyActivity;
 import com.zs.myapplication.switch_button.SwitchButton;
 import com.zs.myapplication.welcome.activity.WelcomeActivity;
+import com.zs.myapplication.xRecyclerView.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,10 +60,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
             }
         });
+        findViewById(R.id.btn_sliding_card).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SlidingCardActivity.class));
+            }
+        });
         findViewById(R.id.btn_calendar).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CalendarActivity.class));
+            }
+        });
+        findViewById(R.id.btn_xrecycler_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerActivity.class));
             }
         });
     }

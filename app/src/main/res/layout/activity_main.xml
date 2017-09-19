@@ -34,9 +34,15 @@
         android:text="卡片式"/>
     <Button
         android:id="@+id/btn_calendar"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="日历"/>
+    <Button
+        android:id="@+id/btn_xrecycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XRecyclerView"/>
     <com.zs.myapplication.switch_button.SwitchButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

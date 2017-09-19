@@ -2,6 +2,7 @@ package com.zs.myapplication.calendar;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -48,6 +49,7 @@ public class CalendarActivity extends AppCompatActivity implements View.OnClickL
          */
         record_gridView = (GridView) findViewById(R.id.record_gridView);
         days = DateUtils.getDayOfMonthFormat(2016, 8);
+        Log.e("---",days.toString());
         dateAdapter = new DateAdapter(this, days, year, month);//传入当前月的年
         record_gridView.setAdapter(dateAdapter);
         record_gridView.setVerticalSpacing(60);

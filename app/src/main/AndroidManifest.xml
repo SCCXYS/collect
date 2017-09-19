@@ -23,7 +23,9 @@
         <activity android:name=".welcome.activity.WelcomeActivity" />
         <activity android:name=".constraint.ConstraintActivity" />
         <activity android:name=".sliding_card.SlidingCardActivity" />
-        <activity android:name=".calendar.CalendarActivity"></activity>
+        <activity android:name=".calendar.CalendarActivity" />
+        <activity android:name=".xRecyclerView.RecyclerActivity" />
+        <activity android:name=".xRecyclerView.CollapsingToolbarLayoutActivity"></activity>
     </application>
 
 </manifest>
