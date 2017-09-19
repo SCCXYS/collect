@@ -65,6 +65,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="汽泡效果"/>
+        <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toast"/>
     <com.zs.myapplication.switch_button.SwitchButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

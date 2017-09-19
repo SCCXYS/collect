@@ -16,6 +16,7 @@ import com.zs.myapplication.constraint.ConstraintActivity;
 import com.zs.myapplication.sliding_card.SlidingCardActivity;
 import com.zs.myapplication.sticky.StickyActivity;
 import com.zs.myapplication.switch_button.SwitchButton;
+import com.zs.myapplication.toast.ToastActivity;
 import com.zs.myapplication.verification.VerificationCodeActivity;
 import com.zs.myapplication.welcome.activity.WelcomeActivity;
 import com.zs.myapplication.xRecyclerView.RecyclerActivity;
@@ -104,6 +105,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, BubbleActivity.class));
+            }
+        });
+        findViewById(R.id.btn_toast).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ToastActivity.class));
             }
         });
     }

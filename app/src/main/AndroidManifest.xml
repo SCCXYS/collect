@@ -29,7 +29,8 @@
         <activity android:name=".anim.AnimActivity" />
         <activity android:name=".Data.DateActivity" />
         <activity android:name=".verification.VerificationCodeActivity" />
-        <activity android:name=".bubble.BubbleActivity"></activity>
+        <activity android:name=".bubble.BubbleActivity" />
+        <activity android:name=".toast.ToastActivity"></activity>
     </application>
 
 </manifest>
