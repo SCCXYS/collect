@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 /**
  * 滑动指示器
- * @author Zhongdaxia
+ * @author zs
  *
  */
 

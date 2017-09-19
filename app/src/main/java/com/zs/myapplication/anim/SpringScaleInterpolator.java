@@ -3,7 +3,7 @@ package com.zs.myapplication.anim;
 import android.view.animation.Interpolator;
 
 /**
- * Created by ZS on 2017/9/19.
+ * Created by zs on 2017/9/19.
  * describe：
  */
 

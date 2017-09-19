@@ -13,7 +13,7 @@ import com.zs.myapplication.welcome.utils.DisplayUtil;
  * 顶层ViewPager,包含2个fragment childview
  * 处于第一个fragment,所有事件将被拦截在本层View,手动分发到指定子View
  * 处于第二个fragment,释放拦截
- * @author Zhongdaxia
+ * @author zs
  */
 
 public class ParentViewPager extends ViewPager {

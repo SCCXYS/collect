@@ -21,7 +21,7 @@ import java.util.Random;
 
 /**
  * Verification Code View
- * Created by sgffsg on 16/11/30.
+ * Created by zs on 16/11/30.
  */
 
 public class VerificationCodeView extends View {

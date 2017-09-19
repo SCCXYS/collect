@@ -21,9 +21,6 @@ import com.zs.myapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- */
 public class BubbleView extends View {
 
     private static final String TAG = "BubbleView";

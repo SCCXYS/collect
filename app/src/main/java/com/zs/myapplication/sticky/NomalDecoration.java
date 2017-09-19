@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.icu.util.Measure;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseArray;
@@ -23,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ZS on 2017/9/15.
+ * Created by zs on 2017/9/15.
  * describe：
  */
 

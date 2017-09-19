@@ -8,7 +8,7 @@ import android.util.TypedValue;
 import android.view.Display;
 
 /**
- * Created by zsl on 15/10/13.
+ * Created by zs on 15/10/13.
  * 里面的方法用于db和px的转换
  */
 public class DisplayUtils {

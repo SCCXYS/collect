@@ -22,7 +22,7 @@ import com.zs.myapplication.welcome.view.ParentViewPager;
 
 /**
  * 小红书欢迎引导界面第二版
- * Created by zhongdaxia
+ * Created by zs
  */
 public class WelcomeActivity extends FragmentActivity {
 

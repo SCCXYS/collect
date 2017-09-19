@@ -1,7 +1,7 @@
 package com.zs.myapplication.sliding_card;
 
 /**
- * Created by cys on 15/6/24.
+ * Created by zs on 15/6/24.
  *
  */
 public class PhotoContent {

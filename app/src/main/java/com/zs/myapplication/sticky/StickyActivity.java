@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.Toast;
 
 import com.zs.myapplication.R;
@@ -13,7 +12,7 @@ import com.zs.myapplication.R;
 import java.util.List;
 
 /**
- * Created by ZS on 2017/9/15.
+ * Created by zs on 2017/9/15.
  * describe：
  */
 
